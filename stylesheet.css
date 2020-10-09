@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+body,html{
+    background: rgb(30, 30, 30);
+    
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;        
+}
+    
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:black;
+    border:none;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    
+    background-color: rgb(73, 90, 140);
+}
+
+input:focus+.slider {
+   /* box-shadow: 0 0 1px #444e56;*/
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+code{
+   
+    outline: none;
+}
+#convertUML,#convertUML{
+    width: 50vw;
+}
+.contpre{
+    display: flex;
+    justify-content: center;
+    
+}
+.umlcont{
+    width: 50%;
+    margin: 0 auto;
+    
+}
+.umlt{
+    background: #2d2d2d !important;
+    padding: 1em;
+	margin: .5em 0;
+    overflow: auto;
+    -webkit-box-shadow: 26px 29px 21px -27px rgba(0,0,0,0.44);
+-moz-box-shadow: 26px 29px 21px -27px rgba(0,0,0,0.44);
+box-shadow: 26px 29px 21px -27px rgba(0,0,0,0.44);
+margin-bottom: 3%;
+}
+.umlt,#umltxt,#att{
+    color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+    hyphens: none;
+    
+}
+.precont{
+    margin: 1%;
+    width: 40vw;
+    display: inline-block;
+    position: relative;
+
+}
+.help{
+    transition: 1s all;
+    cursor: pointer;
+    float: right;
+    margin: 2%;
+font-size: 1.2em;
+    color: rgb(200,200,200);
+    font-weight: 200;
+    font-family: 'Roboto Mono', monospace;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+.help:hover{
+    color:rgb(77, 98, 172)
+}
+.help:active{
+   transform: scale(0.9);
+}
+#getUml,#convert{
+    cursor: pointer;
+    transition: 0.5s all;
+    border: none;
+    background: black;
+    width: 7vw;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 7vh;
+    font-size: 1em;
+    color: rgb(200,200,200);
+    font-weight: 200;
+    font-family: 'Roboto Mono', monospace;
+}
+#getUml:active,#getUml:active{
+transform:scale(0.9);
+}
+
+#getUml:active,#getUml:focus,#convert:active,#convert:focus{
+    outline: none;
+    
+}
+#getUml:hover,#convert:hover{
+    background: rgb(73, 90, 140);
+    color: rgb(220,220,220);
+}
+textarea{
+    
+    height: 25vh;
+    width: 20vw;
+    background: none;
+    color: rgb(200,200,200);
+    border:1px solid rgb(50,50,50)
+}
+.umlbody{
+    display: block;
+}
+#withclass,#class{
+    display: inline;
+    margin: 1%;
+}
+#class{
+    color:rgb(100,100,100);
+     font-size: 1em;
+    outline: none;
+    border:none;
+    background: none;
+    font-family: 'Roboto Mono', monospace;
+    border-bottom: 1px solid rgb(100,100,100);
+}
+.contfoot{
+    display: flex;
+    align-items: center;
+}
+footer{
+    padding: 1%;
+    
+    background: black;
+    box-sizing: unset;
+    margin: 0;
+    height: 14vh;
+     font-size: 1em;
+     font-weight: 200;
+     color: rgb(200,200,200);
+    font-family: 'Roboto Mono', monospace;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(200,200,200);
+    transition: 1s all;
+}
+footer a:hover{
+    color:rgb(77, 98, 172);
+}
+@media screen and (max-width: 1206px) {
+ #getUml,#convert {
+    width: 100%;
+    margin: 3% 0 3% 0;
+  }
+}
+.copyit{
+    cursor: pointer;
+    transition: 1s all;
+    position:absolute;right:5%;top:5%;
+    font-size: 2vh;
+    color: rgb(200,200,200);
+    font-family: 'Roboto Mono', monospace;
+}
+.copyit:hover{
+    transform: scale(1.05);
+}
+.titlesm{
+   display: flex;
+   justify-content: center;
+    color: rgb(200,200,200);
+    font-family: 'Roboto Mono', monospace;
+}
+.issues{
+    font-size: 1.65vh;
+}
+.copyr{
+    display: flex;
+    justify-content: center;
+     font-size: 1.45vh;
+     margin: 0;
+}
+.copyr p{
+    margin: 0;
+}
